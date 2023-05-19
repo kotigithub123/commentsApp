@@ -1,0 +1,49 @@
+/* Write your CSS here */
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  border: 1px lightslategray;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+}
+
+.button1 {
+  text-align: center;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  color: white;
+  margin-right: 5px;
+  outline: none;
+  border: none;
+}
+
+.image {
+  height: 200px;
+  width: 350px;
+  align-self: center;
+}
