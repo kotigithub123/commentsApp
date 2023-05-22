@@ -32,10 +32,10 @@ class Comments extends Component {
     }))
   }
 
-  deleteComment = id => {
+  deleteComment = commentId => {
     const {commentsList} = this.state
     this.setState({
-      commentsList: commentsList.map(eachOne => eachOne.id !== id),
+      commentsList: commentsList.filter(eachOne => eachOne.id !== commentId),
     })
   }
 
@@ -47,7 +47,7 @@ class Comments extends Component {
         commentDetails={eachComment}
         key={eachComment.id}
         toggledIsLiked={this.toggleElement}
-        deleteComment={this.deleteComment}
+        deleteComments={this.deleteComment}
       />
     ))
   }
@@ -124,7 +124,7 @@ class Comments extends Component {
             </button>
             <p>Comment</p>
           </div>
-          <ul>{this.renderComment}</ul>
+          <ul>{this.renderComment()}</ul>
         </div>
       </div>
     )

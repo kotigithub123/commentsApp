@@ -4,10 +4,10 @@ import {formatDistanceToNow} from 'date-fns'
 import './index.css'
 
 const CommentItem = props => {
-  const {commentDetails, toggledIsLike, deleteComment} = props
-  const {InputName, InputComment, id, date, isLike, colors} = commentDetails
+  const {commentDetails, toggledIsLike, deleteComments} = props
+  const {InputName, InputComment, id, date, isLiked, colors} = commentDetails
 
-  const likeImages = isLike
+  const likeImages = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
 
@@ -18,7 +18,7 @@ const CommentItem = props => {
   }
 
   const onDelete = () => {
-    deleteComment(id)
+    deleteComments(id)
   }
 
   return (
